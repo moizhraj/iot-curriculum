@@ -1,0 +1,6 @@
+build/
+VisualGDB/
+.vs/
+.azure_config.h
+mcu.mak
+.cortex-debug*
