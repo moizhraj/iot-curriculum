@@ -59,11 +59,11 @@ API tokens are created from IoT Central.
 
 1. Select the **Administration** tab from the side bar menu
 
-    ![The administration tab](../images/iot-central-menu-administration.png)
+    ![The administration tab](../../../images/iot-central-menu-administration.png)
 
 1. Select **API tokens** from the *Administration* menu
 
-    ![The API tokens menu](../images/iot-central-menu-administration-api-tokens.png)
+    ![The API tokens menu](../../../images/iot-central-menu-administration-api-tokens.png)
 
 1. Select the **+ Generate token** button
 
@@ -81,6 +81,18 @@ API tokens are created from IoT Central.
 
     ![The generated token dialog](../images/iot-central-administration-api-tokens-generated-token-dialog.png)
 
+### URL Encode the API token
+
+The token is not URL encoded - that means it can't be passed as is to a web call as is. To fix it, do the following:
+
+1. Paste the API token into a text editor, such as in a new document in VS Code
+
+1. In the API token there will be 3 ampersands (`&` characters) before various parts - `&sig=`, `&skn=` and `&se=`. These `&` characters cannot be passed to a web call, so need to be changed.
+
+1. Replace all `&` characters with `%26` - so `&sig=` becomes `%26sig=`, `&skn=` becomes `%26sig=`, and `&se=` becomes `%26se=`
+
+1. There is also a space in the API - `SharedAccessSignature sr=`. This space needs to be replaced with `%20`, so the first part of the token should read `SharedAccessSignature%20sr=`
+
 ### Create the webhook
 
 The rule can call a webhook when triggered. The webhook needs a URL to call - a web address that it will use to run the command. This needs to be built up using your IoT Central app details, as well as the API token.
@@ -88,34 +100,36 @@ The rule can call a webhook when triggered. The webhook needs a URL to call - a 
 The format of this URL is:
 
 ```output
-https://<app_name>.azureiotcentral.com/api/preview/devices/pi-environment-monitor/components/EnvironmentMonitor_Environment/commands/TooLoud?access_token=<api_token>
+https://<app_name>.azureiotcentral.com/api/preview/devices/pi-environment-monitor/components/EnvironmentMonitor_Environment/commands/TooLoud?access_token=<encoded_api_token>
 ```
 
 1. To build the URL that you will use, take the above URL and replace the following:
 
     * Replace `<app_name>` with the name of your IoT Central app. You can get this from the URL that you use to access IoT central
-    * Replace `<api_token>` with the API token copied earlier
+    * Replace `<encoded_api_token>` with the API token copied earlier, with all the `&` characters replaced with `%26` and space replaced with `%20`
 
-You can test this webhook using [Postman](https://www.postman.com/downloads/), an app to test web calls.
+You can test this webhook using Postman, a free tool for testing REST APIs.
 
-1. Create a new request in Postman
+1. Download Postman from this link:
 
-1. Set the type to *POST*
+    [getpostman.com/downloads](http://getpostman.com/downloads)
 
-1. Paste in the webhook as the URL
+    Once downloaded, install the app and launch it.
 
-1. Head to the *Body* tab, set the type as *Raw* and *JSON*, and set the content to:
+1. From Postman, select *File->New Tab*
 
-    ```json
-    {
-    }
-    ```
+1. In the *Untitled Request* tab, set the following:
+
+    * Set the request type to `POST`
+    * Enter the encoded command URL into the *Request URL* box
+    * In the *Body* tab, set the type to `raw` and `JSON`
+    * Set the body to be `{}`
 
 1. Select the **Send** button
 
-    ![The postman call](../images/postman-command-call.png)
+    ![The postman command call](../images/postman-command-call.png)
 
-You should see a response in Postman of:
+The request will run and you will see result in the *Body* tab of the response section.
 
 ```json
 {
@@ -126,7 +140,7 @@ You should see a response in Postman of:
 }
 ```
 
-You should also see the Too Loud command called in the output of the Python app, and the LED light up for 10 seconds, or a message output to the console.
+You should also see the Too Loud command called in the output of the Python app, and either the LED light up for 10 seconds, or a message output to the console.
 
 > If you see the following, then the Python app is not running:
 >

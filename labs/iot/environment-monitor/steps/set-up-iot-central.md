@@ -10,7 +10,7 @@ For example, if you had 2 IoT projects, one to monitor temperature across a camp
 
 In this lab you won't create an IoT Central application from scratch, instead you will use a template to create an application from an existing app template - essentially a pre-built app you can copy.
 
-> If you want to learn more about create IoT Applications from scratch, check out the [Create an Azure IoT Central application documentation](https://docs.microsoft.com/azure/iot-central/core/quick-deploy-iot-central?WT.mc_id=iotcurriculum-github-jabenn).
+> If you want to learn more about create IoT Applications from scratch, check out the [Create an Azure IoT Central application documentation](https://docs.microsoft.com/azure/iot-central/core/quick-deploy-iot-central?WT.mc_id=academic-7372-jabenn).
 
 ### Device templates
 
@@ -37,7 +37,7 @@ To create an IoT Central application, follow these steps:
 
 1. Click this link to create a new IoT Central application by using a template that already has a device template set up for an environment monitor with a temperature sensor:
 
-    [aka.ms/iot-curriculum/temperature-sensor-iot-central-template](https://aka.ms/iot-curriculum/temperature-sensor-iot-central-template)
+    [aka.ms/iot-curriculum/env-monitor-template](https://aka.ms/iot-curriculum/env-monitor-template)
 
 1. Log in with a Microsoft account. If you are planning to use an Azure subscription, log in with an account that has access to the subscription.
 
@@ -47,7 +47,7 @@ To create an IoT Central application, follow these steps:
 
     1. Each application needs a unique URL - this is the web site you will go to to access the IoT Central application. It defaults to a variant of the application name, but it needs to be globally unique - as in no other IoT central application can have the same URL. Try adding something unique to it, such as your name or the current date.
 
-    1. Select a pricing plan. The free tier doesn't need an Azure subscription to use and supports up to 5 devices, but will be deleted automatically after 7 days. The other tiers need an Azure subscription but you can have 2 devices for free. After that you pay per device/month - the Standard 1 (S1) tier is US$0.40 per device per month at the time of writing, the Standard 2 (S2) tier is US$0.70. You can find the latest pricing for your region in the [Azure IoT Central pricing guide](https://azure.microsoft.com/pricing/details/iot-central/?WT.mc_id=iotcurriculum-github-jabenn)
+    1. Select a pricing plan. The free tier doesn't need an Azure subscription to use and supports up to 5 devices, but will be deleted automatically after 7 days. The other tiers need an Azure subscription but you can have 2 devices for free. After that you pay per device/month - the Standard 1 (S1) tier is US$0.40 per device per month at the time of writing, the Standard 2 (S2) tier is US$0.70. You can find the latest pricing for your region in the [Azure IoT Central pricing guide](https://azure.microsoft.com/pricing/details/iot-central/?WT.mc_id=academic-7372-jabenn)
 
         The recommended tier is Standard 2 to ensure that you can send enough messages. This will be free for this lab, as you will only be creating 2 devices.
 
@@ -65,11 +65,11 @@ The IoT Central application is a full application to allow you to manage IoT dev
 
 The side bar menu is used to navigate IoT Central.
 
-![The IoT Central menu](../images/iot-central-menu.png)
+![The IoT Central menu](../../../images/iot-central-menu.png)
 
-* **Dashboard** - this section is for viewing and configuring dashboards. A dashboard is a configurable screen showing data from one or more devices, as well as images and text. The new application will have a single dashboard that will be configured to show temperature data for a range of devices.
+* **Dashboard** - this section is for viewing and configuring dashboards. A dashboard is a configurable screen showing data from one or more devices from a device group, as well as images and text. The new application will have a single dashboard that will be configured to show temperature data for a range of devices.
 * **Devices** - this section is to create and manage devices that can talk to this IoT Central application. The new application won't have any devices configured to start with.
-* **Device groups** -  device groups are groups of devices, allowing you to group devices in a way that makes sense to you. The new application won't have any devices groups configured.
+* **Device groups** -  device groups are groups of devices, allowing you to group devices in a way that makes sense to you. The new application will have one device group configured called `All devices` containing all the devices that use the `Environment monitor` device template.
 * **Rules** - rules allow you to set up actions that happen when conditions happen on selected devices, for example if a telemetry value exceeds a threshold. Actions can include sending emails, or calling a web hook. The new application won't have any rules configured.
 * **Analytics** - this section allows you to do more in-depth analysis on the telemetry received from the devices. The new application won't have any analytics configured.
 * **Jobs** - jobs can be set up to set properties on devices, or execute commands at specific times. The new application won't have any jobs configured.
@@ -89,7 +89,7 @@ To create a simulated device, do the following:
 
 1. Select **Devices** from the app menu
 
-    ![The devices menu option](../images/iot-central-menu-devices.png)
+    ![The devices menu option](../../../images/iot-central-menu-devices.png)
 
 1. Select the *Environment Monitor* device template
 
@@ -137,7 +137,7 @@ The device should automatically be added to the IoT Central application dashboar
 
 1. Select **Dashboard** from the app menu
 
-    ![The Dashboard menu option](../images/iot-central-menu-dashboard.png)
+    ![The Dashboard menu option](../../../images/iot-central-menu-dashboard.png)
 
 1. The dashboard should show a chart of the last 100 values from the simulated device.
 

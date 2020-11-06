@@ -8,7 +8,7 @@ In this step you will perform simple analytics and create an email alert on the 
 
 IoT Central can run rules - actions that are executed when a condition is met, such as a telemetry value exceeding a threshold. These rules can be based off individual values, or an aggregation over time.
 
-The actions that can be run include sending emails, calling webhooks (Web addresses that you call to run a task, such as [sending a message to Microsoft Teams](https://docs.microsoft.com/microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors?WT.mc_id=iotcurriculum-github-jabenn)), or calling [Power Automate](https://flow.microsoft.com/?WT.mc_id=iotcurriculum-github-jabenn) or [Logic Apps](https://azure.microsoft.com/services/logic-apps/?WT.mc_id=iotcurriculum-github-jabenn).
+The actions that can be run include sending emails, calling webhooks (Web addresses that you call to run a task, such as [sending a message to Microsoft Teams](https://docs.microsoft.com/microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors?WT.mc_id=academic-7372-jabenn)), or calling [Power Automate](https://flow.microsoft.com/?WT.mc_id=academic-7372-jabenn) or [Logic Apps](https://azure.microsoft.com/services/logic-apps/?WT.mc_id=academic-7372-jabenn).
 
 The rule you will be creating will be an alert when the sound level breaks a threshold. This kind of setup can be used in the real world to monitor noise in factories or industry to ensure it doesn't exceed safe levels. The concept can also be used for things like temperature monitoring of machinery to ensure it doesn't overheat, or vibration monitoring to ensure a machine isn't breaking. In most situations you would either want an alert through a notification such as an email, or through direct control of a machine.
 
@@ -22,7 +22,7 @@ To create an IoT Central rule
 
 1. From the IoT Central app, select the **Rules** tab from the side bar menu
 
-    ![The rules menu](../images/iot-central-menu-rules.png)
+    ![The rules menu](../../../images/iot-central-menu-rules.png)
 
 1. Select the **+ New** button to create a new rule
 
