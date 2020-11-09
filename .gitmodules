@@ -1,0 +1,9 @@
+[submodule "labs/iot/gps-directions-and-positioning/code/stm32/core/lib/threadx"]
+	path = labs/iot/gps-directions-and-positioning/code/stm32/core/lib/threadx
+	url = https://github.com/azure-rtos/threadx.git
+[submodule "labs/iot/gps-directions-and-positioning/code/stm32/core/lib/netxduo"]
+	path = labs/iot/gps-directions-and-positioning/code/stm32/core/lib/netxduo
+	url = https://github.com/azure-rtos/netxduo.git
+[submodule "labs/iot/gps-directions-and-positioning/code/stm32/core/lib/jsmn/src"]
+	path = labs/iot/gps-directions-and-positioning/code/stm32/core/lib/jsmn/src
+	url = https://github.com/zserge/jsmn
