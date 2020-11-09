@@ -40,19 +40,19 @@ Follow below steps to connect the Neo 6m GPS sensor on STM32:
 
     > The Power connection is used to power the GPS sensor using the power source that STM32 is connected with. The D0 pin is the receiving pin (RX) on STM32 which is used to receive the GPS data using the serial port.
 
-    ![STM32 Pin Layout with markers](../images/stm32-pin-layout-connectors.JPG)
+    ![STM32 Pin Layout with markers](../images/stm32-pin-layout-connectors.jpg)
 
-    ![STM32 Pin with Jumper wire connected](../images/stm32-jumper-connections.JPG)
+    ![STM32 Pin with Jumper wire connected](../images/stm32-jumper-connections.jpg)
 
 1. Attach the antenna to the GPS sensor, place it over a breadboard and then attach the other end of jumper wires to the sensor. 
 
-    ![Neo 6M GPS Sensor](../images/neo-6m-gps-sensor.JPG)
+    ![Neo 6M GPS Sensor](../images/neo-6m-gps-sensor.jpg)
 
-    ![Jumper wire connected with GPS sensor](../images/gps-jumper-connections.JPG)
+    ![Jumper wire connected with GPS sensor](../images/gps-jumper-connections.jpg)
 
     > Below figure shows the entire setup
 
-    ![Jumper wire connections on STM32 and GPS](../images/stm32-gps-jumper-connections.JPG)
+    ![Jumper wire connections on STM32 and GPS](../images/stm32-gps-jumper-connections.jpg)
 
     > You can avoid connecting the Power and Ground jumper wires and directly power the GPS sensor with a second micro USB slot available on the GPS sensor.
 
@@ -73,7 +73,7 @@ Clone the repo to download all sample device code, setup scripts, and offline ve
 
 or if you have alredy cloned the repo, you have to initialize the linked submodules for this directory with following command
 
-`git submodule --init --recursive`
+`git submodule update --init --recursive`
 
 ### Install programming tools
 
