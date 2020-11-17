@@ -6,11 +6,11 @@ In this step you will set up Azure IoT Hub and configure your device in the IoT 
 
 ## IoT Hub
 
-[Azure IoT Hub](https://azure.microsoft.com/services/iot-hub/?WT.mc_id=iotcurriculum-github-jabenn) provides a cloud-hosted solution back end to connect virtually any device.
+[Azure IoT Hub](https://azure.microsoft.com/services/iot-hub/?WT.mc_id=academic-7372-jabenn) provides a cloud-hosted solution back end to connect virtually any device.
 
-Azure IoT Hub has a free tier that allows certain free messages per Iot Hub unit. If you want to send/receive more messages, you will need to select a different pricing tier. You can find pricing details on the [Azure IoT Hub pricing page](https://azure.microsoft.com/pricing/details/iot-hub/?WT.mc_id=iotcurriculum-github-jabenn).
+Azure IoT Hub has a free tier that allows certain free messages per Iot Hub unit. If you want to send/receive more messages, you will need to select a different pricing tier. You can find pricing details on the [Azure IoT Hub pricing page](https://azure.microsoft.com/pricing/details/iot-hub/?WT.mc_id=academic-7372-jabenn).
 
-All the documentation for IoT Hub is available in the [Microsoft IoT Hub docs](https://docs.microsoft.com/azure/iot-hub/?WT.mc_id=iotcurriculum-github-jabenn). Refer to these docs for the latest up-to date information on using IoT Hub.
+All the documentation for IoT Hub is available in the [Microsoft IoT Hub docs](https://docs.microsoft.com/azure/iot-hub/?WT.mc_id=academic-7372-jabenn). Refer to these docs for the latest up-to date information on using IoT Hub.
 
 IoT Hub provides 2 types of devices to be created, IoT Device and IoT Edge Device. 
 
